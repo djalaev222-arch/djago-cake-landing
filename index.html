@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>djago.cake — КП на разработку сайта</title>
+<meta name="description" content="Коммерческое предложение на разработку сайта-витрины для djago.cake: каталог кето, БГБКБС и веган десертов без ручной переписки в WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">dj</span>
+      <span class="brand-name">djago.cake</span>
+    </a>
+    <nav class="header-nav" aria-label="Разделы предложения">
+      <a href="#solution">Решение</a>
+      <a href="#plan">План</a>
+      <a href="#pricing">Стоимость</a>
+      <a href="#contact" class="nav-cta">Обсудить</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blob hero-blob--one" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob--two" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal>КП · для djago.cake</p>
+        <h1 data-reveal>Сайт для djago.cake:<br>витрина без ручной переписки</h1>
+        <p class="hero-lead" data-reveal>
+          Сейчас каждый заказ — это переписка в WhatsApp: составы, цены, диеты вручную,
+          в любое время суток. Ниже — как может выглядеть сайт, который берёт это на себя,
+          а вам оставляет только готовые заявки.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a href="#solution" class="btn btn-primary">
+            Посмотреть, как это будет выглядеть
+            <i data-lucide="arrow-down-right"></i>
+          </a>
+          <div class="hero-tags">
+            <span class="diet-tag diet-tag--keto">Кето</span>
+            <span class="diet-tag diet-tag--gf">БГБКБС</span>
+            <span class="diet-tag diet-tag--vegan">Веган</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="hero-card hero-card--back" aria-hidden="true"></div>
+        <div class="hero-card hero-card--front">
+          <div class="hero-card-top">
+            <span class="hero-card-badge">Новинка</span>
+            <i data-lucide="heart" class="hero-card-heart"></i>
+          </div>
+          <div class="hero-card-thumb"></div>
+          <p class="hero-card-title">Чизкейк «Манго-кокос»</p>
+          <p class="hero-card-meta">Кето · без сахара</p>
+          <div class="hero-card-bottom">
+            <span class="hero-card-price">1 450 ₽</span>
+            <span class="hero-card-btn"><i data-lucide="plus"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem section">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Сейчас</p>
+      <h2 data-reveal>Три вещи, которые каждый день съедают время</h2>
+      <div class="problem-grid">
+        <article class="problem-card" data-reveal>
+          <div class="problem-icon"><i data-lucide="message-circle"></i></div>
+          <h3>Ручная переписка в WhatsApp</h3>
+          <p>Один и тот же вопрос про состав и цену — десятки раз в день, вручную, без готовых ответов.</p>
+        </article>
+        <article class="problem-card" data-reveal>
+          <div class="problem-icon"><i data-lucide="layout-grid"></i></div>
+          <h3>Нет единого каталога по диетам</h3>
+          <p>Кето, БГБКБС и веган-позиции живут вперемешку в сторис и старых постах — их сложно найти.</p>
+        </article>
+        <article class="problem-card" data-reveal>
+          <div class="problem-icon"><i data-lucide="moon-star"></i></div>
+          <h3>Заявки теряются ночью</h3>
+          <p>Написали в 23:40 — а утром сообщение уже потерялось среди остальных. Клиент не дождался и ушёл.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution section" id="solution">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Решение</p>
+      <h2 data-reveal>Каталог, который сам всё объясняет</h2>
+      <p class="section-lead" data-reveal>
+        Фильтр по диете, состав и цена — прямо на карточке. Клиент сам находит то, что ему можно,
+        и оформляет заказ без единого сообщения вам.
+      </p>
+
+      <div class="catalog-demo" data-reveal>
+        <div class="catalog-tabs" role="tablist" aria-label="Категории десертов">
+          <button class="catalog-tab is-active" data-diet="all" role="tab" aria-selected="true">Все</button>
+          <button class="catalog-tab" data-diet="keto" role="tab" aria-selected="false">Кето</button>
+          <button class="catalog-tab" data-diet="gf" role="tab" aria-selected="false">БГБКБС</button>
+          <button class="catalog-tab" data-diet="vegan" role="tab" aria-selected="false">Веган</button>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="included section">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Что входит в сайт</p>
+      <h2 data-reveal>Не просто витрина — рабочий инструмент</h2>
+      <div class="included-list">
+        <div class="included-item" data-reveal>
+          <div class="included-icon"><i data-lucide="layout-grid"></i></div>
+          <div>
+            <h3>Каталог десертов</h3>
+            <p>С фильтром по диете, составом и фото каждой позиции.</p>
+          </div>
+        </div>
+        <div class="included-item" data-reveal>
+          <div class="included-icon"><i data-lucide="clipboard-check"></i></div>
+          <div>
+            <h3>Форма заказа</h3>
+            <p>Клиент оформляет заявку сам — вам приходит уже готовый заказ с деталями.</p>
+          </div>
+        </div>
+        <div class="included-item" data-reveal>
+          <div class="included-icon"><i data-lucide="graduation-cap"></i></div>
+          <div>
+            <h3>Страница обучения</h3>
+            <p>Запись на мастер-классы с выбором даты и оплатой места.</p>
+          </div>
+        </div>
+        <div class="included-item" data-reveal>
+          <div class="included-icon"><i data-lucide="star"></i></div>
+          <div>
+            <h3>Отзывы</h3>
+            <p>Живая лента отзывов от клиентов — доверие с первого экрана.</p>
+          </div>
+        </div>
+        <div class="included-item" data-reveal>
+          <div class="included-icon"><i data-lucide="truck"></i></div>
+          <div>
+            <h3>Доставка и оплата</h3>
+            <p>Интеграция с сервисом доставки и приёмом онлайн-оплаты.</p>
+          </div>
+        </div>
+        <div class="included-item" data-reveal>
+          <div class="included-icon"><i data-lucide="smartphone"></i></div>
+          <div>
+            <h3>Мобильная адаптация</h3>
+            <p>Аудитория приходит из Instagram — сайт удобен с телефона в первую очередь.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="compare section">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>До и после</p>
+      <h2 data-reveal>Что меняется для вас</h2>
+      <div class="compare-table" data-reveal>
+        <div class="compare-col compare-col--before">
+          <p class="compare-heading">Сейчас</p>
+          <ul>
+            <li><i data-lucide="message-square-x"></i>Ответ вручную на каждый вопрос</li>
+            <li><i data-lucide="search-x"></i>Каталог разбросан по сторис и постам</li>
+            <li><i data-lucide="clock-alert"></i>Ночные заявки теряются</li>
+            <li><i data-lucide="banknote"></i>Оплата и реквизиты — отдельным сообщением</li>
+          </ul>
+        </div>
+        <div class="compare-divider" aria-hidden="true">
+          <i data-lucide="arrow-right"></i>
+        </div>
+        <div class="compare-col compare-col--after">
+          <p class="compare-heading">После</p>
+          <ul>
+            <li><i data-lucide="check-circle-2"></i>Сайт сам отвечает на вопросы о составе</li>
+            <li><i data-lucide="check-circle-2"></i>Один каталог с фильтром по диете</li>
+            <li><i data-lucide="check-circle-2"></i>Заявка фиксируется в любое время</li>
+            <li><i data-lucide="check-circle-2"></i>Оплата — прямо на сайте</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION PLAN -->
+  <section class="plan section" id="plan">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>План реализации</p>
+      <h2 data-reveal>Как будем делать — по этапам</h2>
+      <p class="section-lead" data-reveal>
+        Без пропавшей связи и сюрпризов: на каждом этапе понятно, что происходит сейчас и что дальше.
+      </p>
+      <ol class="plan-steps">
+        <li class="plan-step" data-reveal>
+          <span class="plan-step-num">01</span>
+          <div class="plan-step-body">
+            <h3>Бриф и сбор материалов</h3>
+            <p>Обсуждаем каталог, тексты и референсы. Если фото и описаний ещё нет — поможем понять, что подготовить.</p>
+            <span class="plan-step-time">2–3 дня</span>
+          </div>
+        </li>
+        <li class="plan-step" data-reveal>
+          <span class="plan-step-num">02</span>
+          <div class="plan-step-body">
+            <h3>Дизайн-прототип</h3>
+            <p>Собираем стиль под djago.cake: цвета, шрифты, структуру каталога. Показываем и вносим правки.</p>
+            <span class="plan-step-time">4–5 дней</span>
+          </div>
+        </li>
+        <li class="plan-step" data-reveal>
+          <span class="plan-step-num">03</span>
+          <div class="plan-step-body">
+            <h3>Разработка</h3>
+            <p>Собираем сайт и/или Telegram-бота: каталог с фильтром по диете, форму заказа, нужные интеграции.</p>
+            <span class="plan-step-time">7–10 дней</span>
+          </div>
+        </li>
+        <li class="plan-step" data-reveal>
+          <span class="plan-step-num">04</span>
+          <div class="plan-step-body">
+            <h3>Наполнение и тесты</h3>
+            <p>Загружаем десерты, проверяем на телефонах и в разных браузерах.</p>
+            <span class="plan-step-time">2–3 дня</span>
+          </div>
+        </li>
+        <li class="plan-step" data-reveal>
+          <span class="plan-step-num">05</span>
+          <div class="plan-step-body">
+            <h3>Запуск и обучение</h3>
+            <p>Публикуем и показываем, как самостоятельно добавлять новые десерты и менять цены.</p>
+            <span class="plan-step-time">1 день</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing section" id="pricing">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Стоимость и сроки</p>
+      <h2 data-reveal>Что можно заказать</h2>
+      <div class="pricing-grid">
+        <article class="price-card" data-reveal>
+          <div class="price-icon"><i data-lucide="globe"></i></div>
+          <p class="price-name">Сайт</p>
+          <p class="price-amount">~35 000 ₽</p>
+          <p class="price-amount-note">в среднем по похожим проектам</p>
+          <p class="price-desc">Сайт-витрина с каталогом по диетам, формой заказа и отзывами.</p>
+          <ul class="price-features">
+            <li><i data-lucide="check"></i>Каталог с фильтром по диете</li>
+            <li><i data-lucide="check"></i>Форма заказа</li>
+            <li><i data-lucide="check"></i>Блок отзывов</li>
+            <li><i data-lucide="check"></i>Адаптация под мобильные</li>
+          </ul>
+          <p class="price-timing">Срок: 2–3 недели</p>
+        </article>
+        <article class="price-card price-card--featured" data-reveal>
+          <div class="price-icon price-icon--light"><i data-lucide="bot"></i></div>
+          <p class="price-name">Telegram-бот</p>
+          <p class="price-amount">~20 000 ₽</p>
+          <p class="price-amount-note price-amount-note--light">в среднем по похожим проектам</p>
+          <p class="price-desc">Отвечает на вопросы и принимает заказы прямо в Telegram — даже ночью.</p>
+          <ul class="price-features">
+            <li><i data-lucide="check"></i>Каталог с диетами прямо в чате</li>
+            <li><i data-lucide="check"></i>Автоответы на вопросы о составе</li>
+            <li><i data-lucide="check"></i>Приём заказа с уведомлением вам</li>
+            <li><i data-lucide="check"></i>Работает круглосуточно</li>
+          </ul>
+          <p class="price-timing">Срок: 1–2 недели</p>
+        </article>
+      </div>
+      <p class="price-note" data-reveal>
+        Суммы выше — не фиксированная цена, а средняя по похожим проектам. Итоговая стоимость зависит от
+        объёма каталога, количества интеграций и других деталей — обсуждаем индивидуально после брифа.
+        Сайт и бот хорошо работают вместе: можно заказать отдельно или оба сразу.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <p class="eyebrow eyebrow--light" data-reveal>Контакты</p>
+      <h2 data-reveal>Обсудим?</h2>
+      <p class="contact-lead" data-reveal>
+        Никакого давления и дедлайнов — просто напишите, и разберём детали под ваш каталог и сроки.
+      </p>
+      <div class="contact-actions" data-reveal>
+        <a href="https://t.me/DJMG19" target="_blank" rel="noopener" class="btn btn-light">
+          <i data-lucide="send"></i>
+          Написать в Telegram
+        </a>
+        <a href="tel:+79894778372" class="contact-phone">
+          <i data-lucide="phone"></i>
+          +7 989 477-83-72
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>djago.cake · КП на разработку сайта</span>
+    <span>@DJMG19</span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

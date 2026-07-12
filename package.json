@@ -1,0 +1,12 @@
+{
+  "name": "djago-cake-kp",
+  "version": "1.0.0",
+  "description": "Лендинг-КП на разработку сайта для djago.cake",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
