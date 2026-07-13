@@ -180,15 +180,11 @@ h1, h2, h3 {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: var(--color-accent);
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 0.95rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(43, 33, 24, 0.1);
 }
 
 .brand-name {
@@ -451,6 +447,9 @@ h1, h2, h3 {
   gap: 1.5rem;
 }
 
+/* on desktop this wrapper is transparent to layout; the dessert-card is the real grid item */
+.dessert-stack-item { display: contents; }
+
 .dessert-card {
   background: var(--color-surface);
   border-radius: var(--radius-lg);
@@ -684,7 +683,8 @@ h1, h2, h3 {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  max-width: 480px;
   gap: 1.6rem;
   margin-bottom: 1.6rem;
 }
@@ -698,13 +698,6 @@ h1, h2, h3 {
   border: 1px solid rgba(43, 33, 24, 0.06);
 }
 
-.price-card--featured {
-  background: var(--color-espresso);
-  color: var(--color-cream-text);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-soft);
-}
-
 .price-icon {
   width: 48px; height: 48px;
   border-radius: var(--radius-sm);
@@ -715,11 +708,6 @@ h1, h2, h3 {
   margin-bottom: 1.2rem;
 }
 .price-icon i { width: 22px; height: 22px; }
-
-.price-icon--light {
-  background: rgba(233, 169, 123, 0.18);
-  color: #E9A97B;
-}
 
 .price-name {
   font-family: var(--font-display);
@@ -740,15 +728,11 @@ h1, h2, h3 {
   margin-bottom: 1.2rem;
 }
 
-.price-amount-note--light { color: rgba(245, 233, 221, 0.6); }
-
 .price-desc {
   font-size: 0.92rem;
   margin-bottom: 1.4rem;
   color: var(--color-text-soft);
 }
-
-.price-card--featured .price-desc { color: rgba(245, 233, 221, 0.75); }
 
 .price-features {
   display: flex;
@@ -765,14 +749,12 @@ h1, h2, h3 {
 }
 
 .price-features i { width: 16px; height: 16px; color: var(--color-accent); flex-shrink: 0; }
-.price-card--featured .price-features i { color: #E9A97B; }
 
 .price-timing {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-accent-dark);
 }
-.price-card--featured .price-timing { color: #E9A97B; }
 
 .price-note {
   font-size: 0.88rem;
@@ -891,11 +873,44 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   .header-nav a:not(.nav-cta) { display: none; }
   .problem-grid { grid-template-columns: 1fr; }
-  .catalog-grid { grid-template-columns: 1fr; }
+
+  /* stacked-deck catalog on mobile: cards overlap like a fanned pile */
+  .catalog-grid {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .dessert-stack-item {
+    display: block;
+    position: relative;
+    margin-top: -1.4rem;
+    transform: rotate(var(--stack-rotate, 0deg));
+    transition: transform var(--duration-normal) var(--ease-out-expo);
+  }
+
+  .dessert-stack-item:first-child { margin-top: 0; }
+
+  .dessert-stack-item:nth-child(6n+1) { --stack-rotate: -1.6deg; }
+  .dessert-stack-item:nth-child(6n+2) { --stack-rotate: 1.4deg; }
+  .dessert-stack-item:nth-child(6n+3) { --stack-rotate: -1.1deg; }
+  .dessert-stack-item:nth-child(6n+4) { --stack-rotate: 1.2deg; }
+  .dessert-stack-item:nth-child(6n+5) { --stack-rotate: -0.8deg; }
+  .dessert-stack-item:nth-child(6n+6) { --stack-rotate: 0.9deg; }
+
+  .dessert-stack-item:active,
+  .dessert-stack-item:focus-within {
+    --stack-rotate: 0deg;
+    z-index: 5;
+  }
+
+  .dessert-stack-item:active .dessert-card,
+  .dessert-stack-item:focus-within .dessert-card {
+    box-shadow: var(--shadow-soft);
+  }
+
   .compare-table { grid-template-columns: 1fr; }
   .compare-divider { transform: rotate(90deg); justify-self: start; margin-left: 0.5rem; }
-  .pricing-grid { grid-template-columns: 1fr; }
-  .price-card--featured { transform: none; }
 }
 
 @media (max-width: 480px) {
