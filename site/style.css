@@ -159,7 +159,7 @@ ul { list-style: none; }
 }
 
 .btn-header {
-  padding: 0.5rem 3.4rem 0.5rem 1.4rem;
+  padding: 0.72rem 3.7rem 0.72rem 1.4rem;
   border-radius: var(--radius-pill);
   background: var(--color-gold);
   border: 1px solid rgba(36, 21, 9, 0.18);
@@ -171,8 +171,8 @@ ul { list-style: none; }
               box-shadow var(--duration-fast) var(--ease-out-expo);
 }
 
-.btn-header .btn-coin { width: 2.35rem; height: 2.35rem; right: 0.5rem; }
-.btn-header .btn-coin svg { width: 14px; height: 14px; }
+.btn-header .btn-coin { width: 2.7rem; height: 2.7rem; right: 0.45rem; }
+.btn-header .btn-coin svg { width: 15px; height: 15px; }
 
 .btn-header:hover {
   background: var(--color-gold-light);
